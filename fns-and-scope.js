@@ -7,6 +7,15 @@ var name = 'Tyler';
 
   //Code Here
 
+  var isTyler = function (x) {
+  	if (x === 'Tyler') {
+  		return true;
+  	}
+  	else {
+  		return false;
+  	}
+  }
+
 
 //Next problem
 
@@ -16,6 +25,12 @@ var name = 'Tyler';
 
 
   //Code Here
+
+var getName = function() {
+	var name = prompt("enter name");
+	return(name);
+}
+
 
 
 //Next Problem
@@ -27,6 +42,10 @@ var name = 'Tyler';
 
   //Code Here
 
+var welcome = function() {
+	var name = getName();
+	alert("Welcome " + name);
+}
 
 //Next problem
 
@@ -37,6 +56,7 @@ var name = 'Tyler';
 
   //Answer Here
 
+parameters are placeholders in a function expression for arguments.  arguments are what is passed on to a function when it is invoked.
 
 //Next problem
 
@@ -47,7 +67,8 @@ var name = 'Tyler';
 
   //Answer Here
 
-
+false, null, undefined, 0, NaN, '', document.all
+using the every() method in an array.
 
 //Next Problem
 
@@ -57,13 +78,22 @@ var name = 'Tyler';
 
   //Code Here
 
+var myName = function(){
+	return "alicia";
+}
+
+
 //Now save the function definition of myName into a new variable called newMyName
 
   //Code Here
 
+  var newMyName = myName;
+
 //Now alert the result of invoking newMyName
 
-
+alert result: function () {
+				return "alicia";
+			}
 
 //Next problem
 
@@ -73,8 +103,14 @@ var name = 'Tyler';
 
   //Code Here
 
+var outerFn = function () {
+	return newMyName;
+}
+
 //Now save the result of invoking outerFn into a variable called innerFn.
 
   //Code Here
+
+var innerFn = outerFn();
 
 //Now invoke innerFn.
