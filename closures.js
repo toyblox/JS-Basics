@@ -11,11 +11,13 @@ var outer = function(){
 
   //Code Here
 
+  var inner = outer();
+
 //Once you do that, invoke inner.
 
   //Code Here
 
-
+inner();
 
 //Next problem
 
@@ -34,6 +36,15 @@ var callFriend = function(){
 
   //Code Here
 
+var callFriend = function(){
+  var friend = 'Jake';
+  function callF(number){
+    return 'Calling ' + friend + ' at ' + number;
+  }
+  return callF;
+};
+var whatF = callFriend();
+whatF("435-215-9248");
 
 
 //Next Problem
@@ -45,13 +56,26 @@ var callFriend = function(){
 */
 
   //Code Here
-  var count = makeCounter();
-  count() // 1
-  count() // 2
-  count() // 3
-  count() // 4
 
+var count = makeCounter();
+count() // 1
+count() // 2
+count() // 3
+count() // 4
 
+var makeCounter = function() {
+  var number = 0;
+      return function () {
+        return ++number;
+      };
+    };
+
+var count = makeCounter();
+
+alert(count());
+alert(count());
+alert(count());
+alert(count());
 
 //Next Problem
 
@@ -64,6 +88,16 @@ var callFriend = function(){
 
   //Code Here
 
+var doThis = function(inner) {
+  returns function() {
+    var executed = false;
+    inner();
+      if (!executed) {
+        executed = true;
+      }
+  };
+};
+
 
 
 //Next Problem
@@ -71,9 +105,13 @@ var callFriend = function(){
 
 
 /*
-  Now, similar to the last problem, write a function called 'fnCounter' that accepts two parameters. The first parameter will be an anonymous function and the second parameter, 'N', will be a number. Now, in 'fnCounter', allow the anonymous funciton to be invoked 'N' number of times. After it's been invoked 'N' number of times, return 'STOP'.
+  Now, similar to the last problem, write a function called 'fnCounter' that accepts two parameters. The first parameter will be an anonymous function and the second parameter
+  'N', will be a number. Now, in 'fnCounter', allow the anonymous funciton to be invoked 'N' number of times. After it's been invoked 'N' number of times, return 'STOP'.
 */
 
+var fnCounter = function(inner, 'N') {
+
+}
 
 
 //Next Problem
@@ -89,22 +127,29 @@ var callFriend = function(){
     }
   };
 
-  Above you have a function named counter. Examine the function (without running the code) then below write what you expect to happen when the funciton is invoked. *Hint: setTimeout calls a function or evaluates an expression after a specified number of milliseconds.
+  Above you have a function named counter. Examine the function (without running the code) then below write what you expect to happen when the funciton is invoked. 
+  *Hint: setTimeout calls a function or evaluates an expression after a specified number of milliseconds.
 
-    //Answer Here
+    //Answer Here */
 
+  It should run through 1, 2, 3, 4, 5 with 6 seconds between each number but it wont because by the time it counts to 6, the loop has already finished going through the numbers.
 
-  Now, run the function in your console and note what happpens.
+  
+
+  // Now, run the function in your console and note what happpens.
 
   Was your answer right or wrong?
 
     //Answer Here
 
+    right.
+
 
   Fix the counter function so that it works the way you expect it to work. (logging 1 then 2 then 3, etc)
-*/
+
 
     //Code Here
+
 
 
 
@@ -124,5 +169,9 @@ var callFriend = function(){
 
   *Hint: Don't let this fool you. Break down what's really happening here.
 */
+
+for (var i = 0; i < 5; i++) {
+  if (funcArray[] === i)
+}
 
 
